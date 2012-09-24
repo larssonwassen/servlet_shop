@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : editProduct
+    Created on : 2012-sep-11, 19:19:59
+    Author     : xclose
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+          xmlns:c="http://java.sun.com/jsp/jstl/core"  version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output doctype-root-element="html"
+                doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+                doctype-system="http://www.w3c.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <link rel="stylesheet" type="text/css" href="./css/style.css" />
+            <title>First Workshop</title>
+        </head>
+        <body>
+            <header>
+                <h1>Name of page with BIG text!</h1>
+                <menu>
+                    <ul>
+                        <li><a href="./index.xhtml">Home</a></li>
+                        <li><a href="./products.jspx">Products</a></li>
+                        <li><a href="./addProduct.jspx">Add Product</a></li>
+                    </ul>
+                </menu>
+            </header>
+            <section>
+                <form action="products" method="POST">
+                    <input type="hidden" name="action" value="delete" />
+                    <label>Id:</label><input type="text" name="id" value="${prod.getId()}" readonly="readonly" /><br />
+                    <label>Name:</label><input type="text" name="name" value="${prod.getName()}" readonly="readonly" /><br />
+                    <label>Price:</label><input type="text" name="price" value="${prod.getPrice()}" readonly="readonly" /><br />
+                    <input type="submit" value="Delete product" />
+                </form>           
+            </section>
+            <footer>Copyright Discoo and Självbrand</footer>
+        </body>
+    </html>
+
+</jsp:root>
+
